@@ -3,7 +3,10 @@ from .models import Message, Room
 def index(request):
     messages = Message.objects.all
     rooms = Room.objects.all
-    return render(request, 'index.html', {
+    return render(request, 'chat/index.html', {
         'rooms': rooms,
         'messages': messages
     })
+
+def teste(request):
+    return render(request, 'chat/teste.html, {s}')
